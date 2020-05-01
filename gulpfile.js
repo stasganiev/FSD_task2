@@ -11,60 +11,58 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 
-gulp.task("css", ()=>{
-  return gulp.src("src/sass/style.scss")
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([
-      autoprefixer()
-    ]))
-    // .pipe(csso())
-    .pipe(rename("style_min.css"))
-    .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("src/css"))
-    .pipe(server.stream());
+gulp.task("fonts", ()=>{
+  return gulp.src("src/fonts/**/*.*")
+    .pipe(gulp.dest("public/fonts"));
 });
 
-gulp.task("cssnorm", ()=>{
-  return gulp.src("src/sass/normalize.scss")
+gulp.task("img", ()=>{
+  return gulp.src("src/img/**/*.*")
+    .pipe(gulp.dest("public/img"));
+});
+
+gulp.task("js", ()=>{
+  return gulp.src("src/js/**/*.js")
+    .pipe(gulp.dest("public/js"));
+});
+
+gulp.task("pug", ()=>{
+  return gulp.src("src/pug/**/*.pug")
+    .pipe(pug({pretty:true}))
+    .pipe(gulp.dest('public'))
+});
+
+gulp.task("css", ()=>{
+  return gulp.src("src/sass/index.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(csso())
-    .pipe(rename("normalize_min.css"))
+    .pipe(csso())
+    .pipe(rename("style_min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("public/css"))
     .pipe(server.stream());
 });
 
 gulp.task("server", ()=>{
   server.init({
-    server: "src/",
+    server: "public/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
+  gulp.watch("src/fonts/**/*.*", gulp.series("fonts"));
+  gulp.watch("src/img/**/*.*", gulp.series("img"));
+  gulp.watch("src/js/**/*.js", gulp.series("js"));
+  gulp.watch("src/pug/**/*.pug", gulp.series("pug"));
   gulp.watch("src/sass/**/*.scss", gulp.series("css"));
   gulp.watch("src/*.html").on("change", server.reload);
 });
 
-gulp.task("build", gulp.series("css", "cssnorm"));
+gulp.task("build", gulp.series("fonts", "img", "js", "pug", "css"));
 gulp.task("start", gulp.series("build", "server"));
-
-
-
-gulp.task("pug-compile", ()=>{
-  return gulp.src(['app/pug/**/*.pug', '!app/pug/includes/**/*.pug'])
-    .pipe(pug({pretty:true}))
-    .pipe(gulp.dest('app/html'))
-});
-
-gulp.task('watch',()=>{
-  gulp.watch('app/pug/**/*.pug', gulp.series('pug-compile'))
-});
