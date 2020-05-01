@@ -22,7 +22,7 @@ body {
   font-size: 12px;
   line-height: 1.25;
   font-weight: normal;
-  @include colors($txt-color, $bk-color);
+  @include colors($text-color, $bg-color);
 }
 
 main {
