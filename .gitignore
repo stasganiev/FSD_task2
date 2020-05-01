@@ -12,4 +12,4 @@ src/css/*.css
 src/css/*.map
 Thumbs.db
 public/
-design/
+_design/
