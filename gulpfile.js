@@ -27,7 +27,7 @@ gulp.task("js", ()=>{
 });
 
 gulp.task("pug", ()=>{
-  return gulp.src("src/pug/**/*.pug")
+  return gulp.src(["src/pug/**/*.pug", "!src/pug/templates/**/*.pug"])
     .pipe(pug({pretty:true}))
     .pipe(gulp.dest('public'))
 });

@@ -1,30 +1,27 @@
-doctype html
-html(lang='ru')
-  head
-    meta(charset="utf-8")
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible', content='IE-Edge')
-    title Цвета и шрифты
-    meta(name='description' content='Палитра цветов и примеры шрифтов, используемые на сайте')
-    meta(name='keywords' content='цвета и шрифты, цвета, шрифты, палитра, colors, type')
-    link(href='css/style.css' rel='stylesheet')
-    link(rel="preload" href="fonts/myfont.woff" as="font" crossorigin="anonymous")
-  body
-    header.header
-      include ../components/logo-head/logo-head.pug
+extends templates/page.pug
+append config
+  - var pageTitle = 'Цвета и шрифты'
+  - var desc = 'Палитра цветов и примеры шрифтов, используемые на сайте'
+  - var key = 'цвета и шрифты, цвета, шрифты, палитра, colors, type'
+  - var addJS = false
+append links
+  link(rel="preload" href="fonts/myfont.woff" as="font" crossorigin="anonymous")
 
-    main.main
-      .container-fluid
-        .main__pelette.pelette
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-          include ../components/color-card/color-card.pug
-        .main__types.types
-          include ../components/type-card/type-card.pug
-          include ../components/type-card/type-card.pug
-          include ../components/type-card/type-card.pug
-          include ../components/type-card/type-card.pug
+append header
+  include ../components/logo-head/logo-head.pug
+
+append main
+  .container-fluid
+    .main__pelette.pelette
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+      include ../components/color-card/color-card.pug
+    .main__types.types
+      include ../components/type-card/type-card.pug
+      include ../components/type-card/type-card.pug
+      include ../components/type-card/type-card.pug
+      include ../components/type-card/type-card.pug
