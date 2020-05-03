@@ -14,9 +14,5 @@
 }
 
 .color-card__name {
-
-}
-
-.color-card__code {
-
+  @include font_h2(1.5);
 }

@@ -1,0 +1,11 @@
+.type-card {
+  @include flex-row;
+}
+
+.type-card__name {
+  @include font_h1;
+}
+
+.type-card__example {
+  @include font_h1;
+}

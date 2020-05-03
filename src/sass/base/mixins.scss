@@ -1,8 +1,24 @@
+// Цвета и типографика
 @mixin colors($color: $txt-color, $colorbk: $bk-color) {
   color: $color;
   background-color: $colorbk;
 }
 
+@mixin font_h1($lh: 1.25) {
+  font-family: "Quicksand", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: $lh;
+}
+
+@mixin font_h2($lh: 1.25) {
+  font-family: "Quicksand", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: $lh;
+}
+
+// Размеры и отступы
 @mixin size($w: 100px, $h: $w) {
   width: $w;
   height: $h;
@@ -13,6 +29,7 @@
   padding: 0;
 }
 
+// Сетка
 @mixin list-reset {
   list-style: none;
   padding: 0;
