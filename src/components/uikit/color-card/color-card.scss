@@ -6,13 +6,23 @@
   min-width: 70px;
   min-height: 70px;
   border-radius: 6px;
-  background-color: #BC9CFF;
+
+  @each $key, $color-value in $colors-map {
+    &_#{$key} {
+      background-color: $color-value;
+    }
+  }
 }
 
 .color-card__about {
+  margin-left: 40px;
   @include flex-col;
 }
 
 .color-card__name {
   @include font_h2(1.5);
+}
+
+.color-card__code {
+  @include font_body(1.5, 19px);
 }
