@@ -3,7 +3,7 @@
   background-color: $colorbk;
 }
 
-@mixin size($w: 100px, $h: 100px) {
+@mixin size($w: 100px, $h: $w) {
   width: $w;
   height: $h;
 }

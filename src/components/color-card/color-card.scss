@@ -1,0 +1,22 @@
+.color-card {
+  @include flex-row;
+}
+
+.color-card__example {
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 6px;
+  background-color: #BC9CFF;
+}
+
+.color-card__about {
+  @include flex-col;
+}
+
+.color-card__name {
+
+}
+
+.color-card__code {
+
+}
