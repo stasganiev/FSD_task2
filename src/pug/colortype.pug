@@ -13,15 +13,25 @@ append header
 append main
   .container-fluid
     .main__pelette.pelette
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
-      include ../components/color-card/color-card.pug
+      -
+        let items = [
+          {name: 'Dark Shade 100%', code: '#1F2041'},
+          {name: 'Dark Shade 75%', code: '#1F2041'},
+          {name: 'Dark Shade 50%', code: '#1F2041'},
+          {name: 'Dark Shade 25%', code: '#1F2041'},
+          {name: 'Dark Shade 5%', code: '#1F2041'},
+          {name: 'Purple', code: '#BC9CFF'},
+          {name: 'Green', code: '#6FCF97'}
+        ];
+      each item in items
+        include ../components/color-card/color-card.pug
     .main__types.types
-      include ../components/type-card/type-card.pug
-      include ../components/type-card/type-card.pug
-      include ../components/type-card/type-card.pug
-      include ../components/type-card/type-card.pug
+      -
+        items = [
+          {name: 'H1', text: 'This one is the sub-section or widget title'},
+          {name: 'H2', text: 'Next one is the item title inside widgets'},
+          {name: 'H3', text: 'This is a label or CTA text'},
+          {name: 'Body', text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}
+        ];
+      each item in items
+        include ../components/type-card/type-card.pug
