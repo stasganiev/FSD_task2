@@ -1,3 +1,11 @@
 .color-type {
   @include flex-row-sp;
 }
+
+.color-type__palette {
+  flex-basis: 270px;
+}
+
+.color-type__types {
+  flex-basis: 411px;
+}

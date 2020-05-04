@@ -3,9 +3,45 @@
 }
 
 .type-card__name {
-  @include font_h1;
+  flex-basis: 40px;
+  color: $color-shade25;
+  text-align: right;
+
+  &_h1 {
+    @include font_body(1.21, 24px);
+  }
+
+  &_h2 {
+    @include font_body(1.21, 19px);
+  }
+
+  &_h3 {
+    @include font_body(1.25, 12px);
+  }
+
+  &_body {
+    @include font_body(1.7);
+  }
 }
 
 .type-card__example {
-  @include font_h2;
+  flex-basis: 340px;
+  margin-left: 30px;
+
+  &_h1 {
+    @include font_h1;
+  }
+
+  &_h2 {
+    @include font_h2(1.26);
+  }
+
+  &_h3 {
+    @include font_h3;
+  }
+
+  &_body {
+    color: $color-shade75;
+    @include font_body(1.7);
+  }
 }

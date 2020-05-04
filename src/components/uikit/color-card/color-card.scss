@@ -15,6 +15,7 @@
 }
 
 .color-card__about {
+  flex-basis: 160px;
   margin-left: 40px;
   @include flex-col;
 }

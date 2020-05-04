@@ -1,3 +1,3 @@
-.types__item.type-card
-  .type-card__name #{item.name}
-  .type-card__example #{item.text}
+div(class="type-card "+parent_class)
+  div(class="type-card__name type-card__name_"+item.key) #{item.name}
+  div(class="type-card__example type-card__example_"+item.key) #{item.text}
