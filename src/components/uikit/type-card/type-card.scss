@@ -1,5 +1,6 @@
 .type-card {
   @include flex-row;
+  flex-wrap: nowrap;
 }
 
 .type-card__name {
@@ -25,8 +26,10 @@
 }
 
 .type-card__example {
-  flex-basis: 340px;
+  margin-right: 28px;
   margin-left: 30px;
+  flex-basis: 350px;
+  min-width: 350px;
 
   &_h1 {
     @include font_h1;

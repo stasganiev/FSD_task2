@@ -23,6 +23,7 @@
   font-weight: bold;
   font-size: $fs;
   line-height: $lh;
+  text-transform: uppercase;
 }
 
 @mixin font_body($lh: 1.25, $fs: 14px) {

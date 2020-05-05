@@ -1,5 +1,6 @@
 .color-card {
   @include flex-row;
+  flex-wrap: nowrap;
 }
 
 .color-card__example {
@@ -16,14 +17,17 @@
 
 .color-card__about {
   flex-basis: 160px;
+  min-width: 170px;
   margin-left: 40px;
   @include flex-col;
 }
 
 .color-card__name {
+  margin-top: 8px;
   @include font_h2(1.5);
 }
 
 .color-card__code {
-  @include font_body(1.5, 19px);
+  margin-top: 4px;
+  @include font_body(1.2, 18px);
 }
