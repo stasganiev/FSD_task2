@@ -4,9 +4,16 @@
 }
 
 .color-card__example {
-  min-width: 70px;
-  min-height: 70px;
-  border-radius: 6px;
+  @media (max-width: $s-max) {
+    @include size(50px);
+    border-radius: 4px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $m-min) {
+    @include size(70px);
+    border-radius: 6px;
+  }
 
   @each $key, $color-value in $colors-map {
     &_#{$key} {
@@ -16,10 +23,18 @@
 }
 
 .color-card__about {
-  flex-basis: 160px;
+  flex-basis: 170px;
   min-width: 170px;
-  margin-left: 40px;
   @include flex-col;
+
+  @media (max-width: $s-max) {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  @media (min-width: $m-min) {
+    margin-left: 40px;
+  }
 }
 
 .color-card__name {

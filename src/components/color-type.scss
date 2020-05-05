@@ -1,13 +1,36 @@
 .color-type {
-  @include flex-row-sp;
+  @media (max-width: $s-max) {
+    @include flex-col;
+    // align-content: center;
+    // align-items: center;
+    // width: 100%;
+  }
+
+  @media (min-width: $m-min) {
+    @include flex-row-sp;
+  }
 }
 
 .color-type__palette {
-  flex-basis: 270px;
-  margin-top: 64px;
+  @media (max-width: $s-max) {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  @media (min-width: $m-min) {
+    flex-basis: 270px;
+    margin-top: 64px;
+  }
 }
 
 .color-type__types {
-  margin-top: 65px;
-  flex-basis: 411px;
+  @media (max-width: $s-max) {
+    width: 100%;
+  }
+
+  @media (min-width: $m-min) {
+    margin-top: 65px;
+    margin-left: 60px;
+    flex-basis: 411px;
+  }
 }

@@ -4,13 +4,13 @@ $retina-dppx: 1.5dppx;
 
 // главная сетка
 $xs-min: 320px; //mobile *
-$xs-max: 599px;
+$xs-max: 599.9px;
 $s-min: 600px;
-$s-max: 767px;
+$s-max: 767.9px;
 $m-min: 768px; //tablet *
-$m-max: 1169px;
+$m-max: 1169.9px;
 $l-min: 1170px; //1280px //desktop *
-$l-max: 1439px;
+$l-max: 1439.9px;
 $xl-min: 1440px; //1560px
 
 $xs-padding: 15px;
