@@ -1,0 +1,6 @@
+mixin inputElement(name, input_type, text_label, text_placeholder, text_sifnature)
+  .input__wrap
+    .input__caption-wrap
+      label(class="input__label", for=name) #{text_label}
+      span.input__signature #{text_sifnature}
+    input(class="input", type=input_type, id=name, name=name, placeholder=text_placeholder)

@@ -7,4 +7,12 @@ append header
   include ../elements/logo/logo.pug
 
 append main
-  .container-fluid.color-type
+  .container-fluid.grid-container_l
+    .grid-element_l.grid-container_m
+      .grid-element_m
+
+        include ../elements/input/input.pug
+        +inputElement("text-field-default", "text", "Text Field", "Email", "Default")
+
+        include ../elements/input/input.pug
+        +inputElement("text-field-hover", "text", "Text Field", "This is pretty awesome", "Hover / Focus")
