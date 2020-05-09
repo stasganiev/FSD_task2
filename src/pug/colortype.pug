@@ -9,29 +9,5 @@ append header
   include ../elements/logo/logo.pug
 
 append main
-  .container-fluid.color-type
-    .color-type__palette.palette
-      -
-        let items = [
-          {name: "Dark Shade 100%", code: "#1F2041", key: "shade100"},
-          {name: "Dark Shade 75%", code: "#1F2041", key: "shade75"},
-          {name: "Dark Shade 50%", code: "#1F2041", key: "shade50"},
-          {name: "Dark Shade 25%", code: "#1F2041", key: "shade25"},
-          {name: "Dark Shade 5%", code: "#1F2041", key: "shade5"},
-          {name: "Purple", code: "#BC9CFF", key: "purple"},
-          {name: "Green", code: "#6FCF97", key: "green"}
-        ];
-        let parent_class = "palette__item";
-      each item in items
-        include ../elements/color-card/color-card.pug
-    .color-type__types.types
-      -
-        items = [
-          {name: "H1", key: "h1", text: "This one is the sub-section or widget title"},
-          {name: "H2", key: "h2", text: "Next one is the item title inside widgets"},
-          {name: "H3", key: "h3", text: "This is a label or CTA text"},
-          {name: "Body", key: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
-        ];
-        parent_class = "types__item";
-      each item in items
-        include ../elements/type-card/type-card.pug
+  include ../blocks/color-type/color-type.pug
+  +colorTypeBlock("container-fluid")

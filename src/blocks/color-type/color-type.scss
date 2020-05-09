@@ -8,7 +8,7 @@
   }
 }
 
-.color-type__palette {
+.color-type__color-list {
   @media (max-width: $s-max) {
     width: 100%;
     margin: 40px 0;
@@ -20,7 +20,7 @@
   }
 }
 
-.color-type__types {
+.color-type__type-list {
   @media (max-width: $s-max) {
     width: 100%;
   }
@@ -30,4 +30,12 @@
     margin-left: 60px;
     flex-basis: 411px;
   }
+}
+
+.color-type__type-item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.color-type__color-item:not(:last-child) {
+  margin-bottom: 20px;
 }

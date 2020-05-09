@@ -1,0 +1,27 @@
+mixin colorTypeBlock(parent_class)
+  div(class="color-type "+parent_class)
+    .color-type__color-list
+      -
+        let items = [
+          {name: "Dark Shade 100%", code: "#1F2041", key: "shade100"},
+          {name: "Dark Shade 75%", code: "#1F2041", key: "shade75"},
+          {name: "Dark Shade 50%", code: "#1F2041", key: "shade50"},
+          {name: "Dark Shade 25%", code: "#1F2041", key: "shade25"},
+          {name: "Dark Shade 5%", code: "#1F2041", key: "shade5"},
+          {name: "Purple", code: "#BC9CFF", key: "purple"},
+          {name: "Green", code: "#6FCF97", key: "green"}
+        ];
+      each item in items
+        include ../../elements/color-card/color-card.pug
+        +colorCardElement("color-type__color-item", item.key, item.name, item.code)
+    .color-type__type-list
+      -
+        items = [
+          {name: "H1", key: "h1", text: "This one is the sub-section or widget title"},
+          {name: "H2", key: "h2", text: "Next one is the item title inside widgets"},
+          {name: "H3", key: "h3", text: "This is a label or CTA text"},
+          {name: "Body", key: "body", text: "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+        ];
+      each item in items
+        include ../../elements/type-card/type-card.pug
+        +typeCardElement("color-type__type-item", item.key, item.name, item.text)

@@ -1,5 +1,6 @@
-div(class="color-card "+parent_class)
-  div(class="color-card__example color-card__example_"+item.key)
-  .color-card__about
-    .color-card__name #{item.name}
-    .color-card__code #{item.code}
+mixin colorCardElement(parent_class, key, name, code)
+  div(class="color-card "+parent_class)
+    div(class="color-card__example color-card__example_"+key)
+    .color-card__about
+      .color-card__name #{name}
+      .color-card__code #{code}
