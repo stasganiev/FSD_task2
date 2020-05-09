@@ -1,9 +1,6 @@
 .color-type {
   @media (max-width: $s-max) {
     @include flex-col;
-    // align-content: center;
-    // align-items: center;
-    // width: 100%;
   }
 
   @media (min-width: $m-min) {

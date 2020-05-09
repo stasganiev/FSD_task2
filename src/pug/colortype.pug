@@ -4,11 +4,9 @@ append config
   - var desc = "Палитра цветов и примеры шрифтов, используемые на сайте"
   - var key = "цвета и шрифты, цвета, шрифты, палитра, colors, type"
   - var addJS = false
-append links
-  link(rel="preload" href="fonts/myfont.woff" as="font" crossorigin="anonymous")
 
 append header
-  include ../components/logo-head/logo-head.pug
+  include ../elements/logo/logo.pug
 
 append main
   .container-fluid.color-type
@@ -25,7 +23,7 @@ append main
         ];
         let parent_class = "palette__item";
       each item in items
-        include ../components/uikit/color-card/color-card.pug
+        include ../elements/color-card/color-card.pug
     .color-type__types.types
       -
         items = [
@@ -36,4 +34,4 @@ append main
         ];
         parent_class = "types__item";
       each item in items
-        include ../components/uikit/type-card/type-card.pug
+        include ../elements/type-card/type-card.pug
