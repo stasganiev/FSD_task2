@@ -6,6 +6,18 @@
 
 html {
   height: 100%;
+
+  @media (max-width: $s-max) {
+    font-size: 11px;
+  }
+
+  @media (min-width: $m-min) and (max-width: $m-max) {
+    font-size: 12px;
+  }
+
+  @media (min-width: $l-min) {
+    font-size: 14px;
+  }
 }
 
 body {

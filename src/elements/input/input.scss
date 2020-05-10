@@ -1,0 +1,42 @@
+.input,
+.input::placeholder {
+  padding: 12px 15px;
+  @include font_mons(1rem, 1.29);
+}
+
+.input::placeholder {
+  color: rgba($color-shade100, 0.15);;
+}
+
+.input {
+  width: 100%;
+  color: $color-shade25;
+  border: 1px solid $color-shade25;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &_hover {
+    color: $color-shade75;
+    border-color: $color-shade50;
+
+    &::placeholder {
+      color: $color-shade25;
+    }
+  }
+}
+
+.input__caption-wrap {
+  @include flex-row-sp;
+  margin-bottom: 5px;
+}
+
+.input__label {
+  @include font_mons(0.86rem, 1.25, bold, uppercase);
+}
+
+.input__signature {
+  @include font_mons(0.86rem, 1.25, normal, uppercase);
+  color: $color-shade50;
+}

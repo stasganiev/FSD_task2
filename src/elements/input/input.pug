@@ -1,6 +1,13 @@
-mixin inputElement(name, input_type, text_label, text_placeholder, text_sifnature)
-  .input__wrap
-    .input__caption-wrap
-      label(class="input__label", for=name) #{text_label}
-      span.input__signature #{text_sifnature}
-    input(class="input", type=input_type, id=name, name=name, placeholder=text_placeholder)
+mixin inputElement(name, add_class, input_type, text_label, text_placeholder, text_signature)
+  if add_class
+    div(class="input__wrap input__wrap_"+add_class)
+      div(class="input__caption-wrap input__caption-wrap_"+add_class)
+        label(class="input__label input__label_"+add_class, for=name) #{text_label}
+        span(class="input__signature input__signature_"+add_class) #{text_signature}
+      input(class="input input_"+add_class, type=input_type, id=name, name=name, placeholder=text_placeholder)
+  else
+    .input__wrap
+      .input__caption-wrap
+        label(class="input__label", for=name) #{text_label}
+        span.input__signature #{text_signature}
+      input(class="input", type=input_type, id=name, name=name, placeholder=text_placeholder)
