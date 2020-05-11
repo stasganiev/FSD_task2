@@ -59,7 +59,13 @@
   @include font_size($lh, $fs);
 }
 
-// Размеры и отступы
+// Позиция, размеры и отступы
+@mixin pos-bottom-right($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}
+
 @mixin size($w: 100px, $h: $w) {
   width: $w;
   height: $h;

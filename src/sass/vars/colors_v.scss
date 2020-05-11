@@ -1,10 +1,10 @@
-$color-shade100: #1F2041;
+$color-shade100: #1f2041;
 $color-shade75: rgba($color-shade100, 0.75);
 $color-shade50: rgba($color-shade100, 0.5);
 $color-shade25: rgba($color-shade100, 0.25);
 $color-shade5: rgba($color-shade100, 0.05);
-$color-purple: #BC9CFF;
-$color-green: #6FCF97;
+$color-purple: #bc9cff;
+$color-green: #6fcf97;
 
 $colors-map: (
   "shade100": $color-shade100,
@@ -17,8 +17,4 @@ $colors-map: (
 );
 
 $text-color: $color-shade100;
-$bg-color: #fff;
-
-$color-btn-menu: #777;
-$color-btn-menu-hover: #999;
-$color-btn-menu-active: #555;
+$bg-color: #ffffff;

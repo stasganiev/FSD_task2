@@ -1,34 +1,3 @@
-.btn {
-  appearance: none;
-  display: inline-block;
-  margin: 0;
-  padding: 10px 16px;
-  min-width: 100px;
-
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-
-  color: inherit;
-  background-color: transparent;
-  text-decoration: none;
-
-  border: none;
-  border-radius: 5px;
-  box-shadow: none;
-  cursor: pointer;
-  transition: 0.3s ease-out;
-
-  &:hover {
-    background-color: transparent;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px #cbd6ee;
-  }
-}
-
 // ////////////////////////////
 // Главное меню (кнопка "Бургер")
 // ////////////////////////////

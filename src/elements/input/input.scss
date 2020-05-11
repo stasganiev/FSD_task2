@@ -1,3 +1,16 @@
+.input__wrap {
+  position: relative;
+  max-width: 320px;
+
+  &_date {
+    max-width: 150px;
+  }
+
+  &_short {
+    max-width: 267px;
+  }
+}
+
 .input,
 .input::placeholder {
   padding: 12px 15px;
@@ -5,12 +18,13 @@
 }
 
 .input::placeholder {
-  color: rgba($color-shade100, 0.15);;
+  padding-left: 0;
+  color: $color-shade25;
 }
 
 .input {
   width: 100%;
-  color: $color-shade25;
+  color: $color-shade75;
   border: 1px solid $color-shade25;
   border-radius: 4px;
 
@@ -18,12 +32,7 @@
   &:focus,
   &:active,
   &_hover {
-    color: $color-shade75;
     border-color: $color-shade50;
-
-    &::placeholder {
-      color: $color-shade25;
-    }
   }
 }
 
