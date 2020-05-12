@@ -9,6 +9,7 @@ append header
 append main
   .container-fluid.grid-container_l
     .grid-element_l.grid-container_m
+
       .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-field-default", "", "text", "Text Field", "Email", "Default", "", "", "", "")
@@ -33,5 +34,28 @@ append main
       .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-field-suscription", "short", "text", "Subscription text field", "Email", "", ">", "btn__oninput btn__oninput_gradient", "", "")
+
     .grid-element_l.grid-container_m
+
       .grid-element_m
+        include ../elements/title-input/title-input.pug
+        +titleInput("checkbox buttons")
+        include ../elements/checkbox/checkbox.pug
+        +checkboxElement("checkbox-can-smoke", "Можно курить", false)
+        include ../elements/checkbox/checkbox.pug
+        +checkboxElement("checkbox-can-pet", "Можно с питомцами", true)
+        include ../elements/checkbox/checkbox.pug
+        +checkboxElement("checkbox-can-piple", "Можно пригласить гостей (до 10 человек)", true)
+
+        include ../elements/title-input/title-input.pug
+        +titleInput("radio buttons")
+
+        include ../elements/title-input/title-input.pug
+        +titleInput("toggle")
+
+        include ../elements/title-input/title-input.pug
+        +titleInput("like button")
+
+        include ../elements/title-input/title-input.pug
+        +titleInput("rate button")
+

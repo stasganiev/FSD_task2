@@ -1,0 +1,12 @@
+.checkbox__wrap {
+  @include flex-row;
+}
+
+.checkbox {
+  display: block;
+}
+
+.checkbox__label {
+  @include font-mons(1rem, 1.29);
+  color: $color-shade50;
+}
