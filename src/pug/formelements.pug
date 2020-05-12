@@ -10,30 +10,28 @@ append main
   .container-fluid.grid-container_l
     .grid-element_l.grid-container_m
       .grid-element_m
-
         include ../elements/input/input.pug
         +inputElement("text-field-default", "", "text", "Text Field", "Email", "Default", "", "", "", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-field-hover", "hover", "text", "Text Field", "This is pretty awesome", "Hover / Focus", "", "", "This is pretty awesome", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-dropdown", "", "text", "Dropdown", "Сколько гостей", "Default", "v", "btn__oninput btn__oninput_shade50", "Сколько гостей", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-masked-field", "", "text", "Masked text field", "ДД.ММ.ГГГГ", "Default", "", "", "", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("date-dropdown", "date", "text", "Date dropdown", "ДД.ММ.ГГГГ", "", "v", "btn__oninput btn__oninput_shade50", "", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("date-dropdown-value", "date", "text", "Date dropdown", "ДД.ММ.ГГГГ", "", "v", "btn__oninput btn__oninput_shade50", "19.08.2019", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("date-dropdown-filter", "short", "text", "Filter date dropdown", "ДД.ММ.ГГГГ", "", "v", "btn__oninput btn__oninput_shade50", "19 авг - 23 авг", "")
-
+      .grid-element_m
         include ../elements/input/input.pug
         +inputElement("text-field-suscription", "short", "text", "Subscription text field", "Email", "", ">", "btn__oninput btn__oninput_gradient", "", "")
-
-        //- include ../elements/input/input.pug
-        //- +inputElement("name", "add_class", "input_type", "text_label", "text_placeholder", "text_signature", "btn", "btn_class", "value", "pattern")
+    .grid-element_l.grid-container_m
+      .grid-element_m
