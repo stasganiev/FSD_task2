@@ -1,0 +1,10 @@
+mixin titleInput(text_label, label_name, text_signature)
+  .title-input__caption-wrap
+    if label_name
+      label(class="title-input__label", for=label_name) #{text_label}
+      if text_signature
+        span.title-input__signature #{text_signature}
+    else
+      p(class="title-input__label") #{text_label}
+      if text_signature
+        span.title-input__signature #{text_signature}

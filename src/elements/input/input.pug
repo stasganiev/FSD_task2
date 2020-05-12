@@ -1,19 +1,19 @@
 mixin inputElement(name, add_class, input_type, text_label, text_placeholder, text_signature, btn, btn_class, value, pattern)
   if add_class
     div(class="input__wrap input__wrap_"+add_class)
-      div(class="input__caption-wrap input__caption-wrap_"+add_class)
-        label(class="input__label input__label_"+add_class, for=name) #{text_label}
-        if text_signature
-          span(class="input__signature input__signature_"+add_class) #{text_signature}
+
+      include ../title-input/title-input.pug
+      +titleInput(text_label, name, text_signature)
+
       input(class="input input_"+add_class, type=input_type, id=name, name=name, placeholder=text_placeholder, value=value, pattern=pattern)
       if btn
         button(class="btn input__btn input__btn_"+add_class+" "+btn_class type="button") #{btn}
   else
     .input__wrap
-      .input__caption-wrap
-        label(class="input__label", for=name) #{text_label}
-        if text_signature
-          span.input__signature #{text_signature}
+
+      include ../title-input/title-input.pug
+      +titleInput(text_label, name, text_signature)
+
       input(class="input", type=input_type, id=name, name=name, placeholder=text_placeholder, value=value, pattern=pattern)
       if btn
         button(class="btn "+btn_class type="button") #{btn}
