@@ -3,10 +3,18 @@
 }
 
 .checkbox {
-  display: block;
+  display: none;
 }
 
-.checkbox__label {
+.checkbox + .checkbox__label {
+  position: relative;
+  padding-left: 30px;
   @include font-mons(1rem, 1.29);
   color: $color-shade50;
+  background: url("../img/checkbox/check-off.svg") no-repeat scroll 0 0;
+  cursor: pointer;
+}
+
+.checkbox:checked + .checkbox__label {
+  background: url("../img/checkbox/check-on.svg") no-repeat scroll 0 0;
 }

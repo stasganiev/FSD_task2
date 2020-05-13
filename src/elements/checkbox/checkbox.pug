@@ -1,7 +1,7 @@
 mixin checkboxElement(name, text_label, isCheck)
   .checkbox__wrap
     if isCheck
-      input(class="checkbox", type="checkbox" name=name, checked)
+      input(class="checkbox", type="checkbox", name=name, id=name, checked)
     else
-      input(class="checkbox", type="checkbox" name=name)
+      input(class="checkbox", type="checkbox", name=name, id=name)
     label(class="checkbox__label", for=name) #{text_label}
