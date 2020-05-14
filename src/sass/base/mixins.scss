@@ -66,6 +66,12 @@
   right: $right;
 }
 
+@mixin pos-top-left($bottom: 0, $right: 0) {
+  position: absolute;
+  top: $bottom;
+  left: $right;
+}
+
 @mixin size($w: 100px, $h: $w) {
   width: $w;
   height: $h;

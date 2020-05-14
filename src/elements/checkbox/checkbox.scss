@@ -1,5 +1,6 @@
 .checkbox__wrap {
   @include flex-row;
+  margin-bottom: 5px;
 }
 
 .checkbox {
@@ -8,13 +9,39 @@
 
 .checkbox + .checkbox__label {
   position: relative;
+  cursor: pointer;
   padding-left: 30px;
+
   @include font-mons(1rem, 1.29);
   color: $color-shade50;
-  background: url("../img/checkbox/check-off.svg") no-repeat scroll 0 0;
-  cursor: pointer;
+
+  &::before {
+    content: "";
+    @include pos-top-left;
+    @include size(20px);
+    border: 1px solid $color-shade25;
+    border-radius: 4px;
+  }
+
+  &::after {
+    display: none;
+  }
 }
 
 .checkbox:checked + .checkbox__label {
-  background: url("../img/checkbox/check-on.svg") no-repeat scroll 0 0;
+  &::before {
+    border-color: $color-purple;
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    @include pos-top-left(5px, 7px);
+    @include size(6px, 8px);
+    border-width: 0 2px 2px 0;
+    border-style: solid;
+    border-image: linear-gradient(180deg, $color-purple 0%, $color-purple-second 100%);
+    border-image-slice: 1;
+    transform: rotate(45deg);
+  }
 }
