@@ -1,0 +1,8 @@
+mixin radioListElement(title, radioList)
+  if title
+    include ../title-input/title-input.pug
+    +titleInput(title)
+  .radio-list
+    each item in radioList
+      include ../radio/radio.pug
+      +radioElement(item.name, item.id, item.text, item.checked)

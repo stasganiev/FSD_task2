@@ -47,8 +47,13 @@ append main
         include ../elements/checkbox-list/checkbox-list.pug
         +checkboxListElement("checkbox buttons", checkboxList)
 
-        include ../elements/title-input/title-input.pug
-        +titleInput("radio buttons")
+        -
+          let radioList = [
+            {name: "radio-famale", id: "radio-famale-man", text: "Мужчина", checked: true},
+            {name: "radio-famale", id: "radio-famale-woman", text: "Женщина", checked: false}
+          ];
+        include ../elements/radio-list/radio-list.pug
+        +radioListElement("radio buttons", radioList)
 
         include ../elements/title-input/title-input.pug
         +titleInput("toggle")

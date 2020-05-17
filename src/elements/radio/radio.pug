@@ -1,0 +1,7 @@
+mixin radioElement(name, id, text_label, isCheck)
+  .radio__wrap
+    if isCheck
+      input(class="radio", type="radio", name=name, id=id, checked)
+    else
+      input(class="radio", type="radio", name=name, id=id)
+    label(class="radio__label", for=id) #{text_label}

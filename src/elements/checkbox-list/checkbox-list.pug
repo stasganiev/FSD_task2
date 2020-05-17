@@ -1,8 +1,8 @@
 mixin checkboxListElement(title, checkboxList)
+  if title
+    include ../title-input/title-input.pug
+    +titleInput(title)
   .checkbox-list
-    if title
-      include ../title-input/title-input.pug
-      +titleInput(title)
     each item in checkboxList
       include ../checkbox/checkbox.pug
       +checkboxElement(item.name, item.text, item.checked)
