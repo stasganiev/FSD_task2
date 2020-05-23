@@ -40,13 +40,13 @@ append main
       .grid-element_m
         -
           let checkboxList = [
-            {name: "checkbox-can-smoke", text: "Можно курить", checked: false},
-            {name: "checkbox-can-pet", text: "Можно с питомцами", checked: true},
-            {name: "checkbox-can-piple", text: "Можно пригласить гостей (до 10 человек)", checked: true}
+            {name: "checkbox-can-smoke", text: "Можно курить", checked: false, toggle: false},
+            {name: "checkbox-can-pet", text: "Можно с питомцами", checked: true, toggle: false},
+            {name: "checkbox-can-piple", text: "Можно пригласить гостей (до 10 человек)", checked: true, toggle: false}
           ];
         include ../elements/checkbox-list/checkbox-list.pug
         +checkboxListElement("checkbox buttons", checkboxList)
-
+      .grid-element_m
         -
           let radioList = [
             {name: "radio-famale", id: "radio-famale-man", text: "Мужчина", checked: true},
@@ -54,13 +54,17 @@ append main
           ];
         include ../elements/radio-list/radio-list.pug
         +radioListElement("radio buttons", radioList)
-
-        include ../elements/title-input/title-input.pug
-        +titleInput("toggle")
-
+      .grid-element_m
+        -
+          let toggleList = [
+            {name: "toggle-promo-on", text: "Получать спецпредложения", checked: true, toggle: true},
+            {name: "toggle-promo-off", text: "Получать спецпредложения", checked: false, toggle: true}
+          ];
+        include ../elements/checkbox-list/checkbox-list.pug
+        +checkboxListElement("toggle", toggleList)
+      .grid-element_m
         include ../elements/title-input/title-input.pug
         +titleInput("like button")
-
+      .grid-element_m
         include ../elements/title-input/title-input.pug
         +titleInput("rate button")
-

@@ -5,4 +5,4 @@ mixin checkboxListElement(title, checkboxList)
   .checkbox-list
     each item in checkboxList
       include ../checkbox/checkbox.pug
-      +checkboxElement(item.name, item.text, item.checked)
+      +checkboxElement(item.name, item.text, item.checked, item.toggle)

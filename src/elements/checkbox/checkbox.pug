@@ -1,7 +1,13 @@
-mixin checkboxElement(name, text_label, isCheck)
+mixin checkboxElement(name, text_label, isCheck, toggle)
   .checkbox__wrap
-    if isCheck
-      input(class="checkbox", type="checkbox", name=name, id=name, checked)
+    if toggle
+      if isCheck
+        input(class="checkbox checkbox_toggle", type="checkbox", name=name, id=name, checked)
+      else
+        input(class="checkbox checkbox_toggle", type="checkbox", name=name, id=name)
     else
-      input(class="checkbox", type="checkbox", name=name, id=name)
+      if isCheck
+        input(class="checkbox checkbox_check", type="checkbox", name=name, id=name, checked)
+      else
+        input(class="checkbox checkbox_check", type="checkbox", name=name, id=name)
     label(class="checkbox__label", for=name) #{text_label}
