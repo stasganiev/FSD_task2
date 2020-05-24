@@ -10,9 +10,11 @@
 .checkbox + .checkbox__label {
   position: relative;
   cursor: pointer;
-  padding-left: 30px;
-
   @include font-mons(1rem, 1.29);
+}
+
+.checkbox_check + .checkbox__label {
+  padding-left: 30px;
   color: $color-shade50;
 
   &::before {
@@ -28,11 +30,36 @@
   }
 }
 
+.checkbox_toggle + .checkbox__label {
+  padding-left: 50px;
+  color: $color-shade75;
+
+  &::before {
+    content: "";
+    @include pos-top-left;
+    @include size(40px, 20px);
+    border: 1px solid $color-shade25;
+    border-radius: 10px;
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    @include size(12px);
+    border-radius: 10px;
+    @include pos-top-left(5px, 5px);
+    background-color: $color-shade25;
+    transition-duration: 0.25s;
+  }
+}
+
 .checkbox:checked + .checkbox__label {
   &::before {
     border-color: $color-purple;
   }
+}
 
+.checkbox_check:checked + .checkbox__label {
   &::after {
     display: inline-block;
     content: "";
@@ -43,5 +70,12 @@
     border-image: linear-gradient(180deg, $color-purple 0%, $color-purple-second 100%);
     border-image-slice: 1;
     transform: rotate(45deg);
+  }
+}
+
+.checkbox_toggle:checked + .checkbox__label {
+  &::after {
+    @include pos-top-left(5px, 25px);
+    background-image: linear-gradient(180deg, $color-purple 0%, $color-purple-second 100%);
   }
 }
