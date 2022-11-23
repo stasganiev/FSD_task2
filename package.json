@@ -26,6 +26,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "autoprefixer": "^9.6.1",
-    "browser-sync": "^2.26.7"
+    "browser-sync": "^2.27.10"
   }
 }
